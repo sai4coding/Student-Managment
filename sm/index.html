@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <form id="studentForm">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" placeholder="Enter name" required>
+            <label for="rollno">Roll No</label>
+            <input type="text" id="rollno" placeholder="Enter roll no" required>
+            <label for="subject1">Marks in Subject-1</label>
+            <input type="number" id="subject1" placeholder="Enter marks" required>
+            <label for="subject2">Marks in Subject-2</label>
+            <input type="number" id="subject2" placeholder="Enter marks" required>
+            <label for="subject3">Marks in Subject-3</label>
+            <input type="number" id="subject3" placeholder="Enter marks" required>
+            <button type="button" id="addStudent">Calculate Result</button>
+        </form>
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll Number</th>
+                    <th>Total Marks</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="exportPdf">Export to PDF</button>
+        <button id="exportExcel">Export to Excel</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js"></script>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
